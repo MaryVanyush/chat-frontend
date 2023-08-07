@@ -143,7 +143,7 @@ const runWebSocket = () => {
   const sender = userItems.filter(item => item.dataset.name);
   const senderName = sender[0].dataset.name;
   // const ws = new WebSocket("ws://localhost:7070/ws");
-  const ws = new WebSocket("ws://chat-gj8s.onrender.com/ws");
+  const ws = new WebSocket("wss://chat-gj8s.onrender.com/ws");
   messageInput.addEventListener("keyup", event => {
     event.preventDefault();
     if (event.code !== "Enter") return;
