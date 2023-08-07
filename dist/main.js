@@ -127,7 +127,9 @@ class Messages {
 
 
 
-const api = new Api("http://localhost:7070/");
+
+// const api = new Api("http://localhost:7070/");
+const api = new Api("https://chat-gj8s.onrender.com/");
 const usersBox = document.querySelector(".users-box");
 const users = new Users(usersBox);
 
@@ -140,7 +142,8 @@ const runWebSocket = () => {
   const userItems = [...document.querySelectorAll(".user-item")];
   const sender = userItems.filter(item => item.dataset.name);
   const senderName = sender[0].dataset.name;
-  const ws = new WebSocket("ws://localhost:7070/ws");
+  // const ws = new WebSocket("ws://localhost:7070/ws");
+  const ws = new WebSocket("ws://chat-gj8s.onrender.com/ws");
   messageInput.addEventListener("keyup", event => {
     event.preventDefault();
     if (event.code !== "Enter") return;
